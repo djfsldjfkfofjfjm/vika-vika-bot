@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ь<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -820,7 +820,162 @@
             }
         }
 
+        /* Боты клиентов - современный блок */
+        .client-bots {
+            padding: 60px 0;
+            background: var(--wa-bg);
+        }
 
+        .bots-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .bots-title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .bots-subtitle {
+            font-size: 20px;
+            color: #8696A0;
+            margin-bottom: 40px;
+        }
+
+        .bots-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .bot-item {
+            background: #202C33;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #2A3942;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bot-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--wa-green);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.15);
+        }
+
+        .bot-emoji {
+            font-size: 48px;
+            margin-bottom: 16px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .bot-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .bot-desc {
+            font-size: 14px;
+            color: #8696A0;
+            margin-bottom: 12px;
+        }
+
+        .bot-username {
+            font-size: 14px;
+            color: var(--wa-green);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .try-btn {
+            background: linear-gradient(135deg, var(--wa-green), #1ED760);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .try-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .client-bots {
+                padding: 40px 0;
+            }
+
+            .bots-container {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 0 16px;
+                max-width: 100%;
+            }
+
+            .bots-title {
+                font-size: 28px;
+                line-height: 1.2;
+                margin-bottom: 12px;
+            }
+
+            .bots-subtitle {
+                font-size: 16px;
+                margin-bottom: 32px;
+            }
+
+            .bot-item {
+                padding: 16px;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .bot-emoji {
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+
+            .bot-title {
+                font-size: 16px;
+                margin-bottom: 4px;
+            }
+
+            .bot-desc {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            .bot-username {
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+
+            .try-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+                border-radius: 16px;
+            }
+        }
 
         /* Final CTA Section - Мощный финальный блок */
         .final-cta {
@@ -1272,7 +1427,65 @@
         </div>
     </section>
 
+    <!-- Боты клиентов -->
+    <section class="client-bots">
+        <div class="container">
+            <div class="bots-header">
+                <h2 class="bots-title">Работающие боты наших клиентов</h2>
+                <p class="bots-subtitle">Тестируй прямо сейчас — они работают 24/7</p>
+            </div>
+            
+            <div class="bots-container">
+                <div class="bot-item">
+                    <div class="bot-emoji">❄️</div>
+                    <h3 class="bot-title">Умный Климат</h3>
+                    <p class="bot-desc">Кондиционеры и вентиляция</p>
+                    <span class="bot-username">@umniy_climat_bot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/umniy_climat_bot', '_blank')">Тестировать</button>
+                </div>
 
+                <div class="bot-item">
+                    <div class="bot-emoji">💇‍♀️</div>
+                    <h3 class="bot-title">Elena Hair</h3>
+                    <p class="bot-desc">Курсы парикмахеров</p>
+                    <span class="bot-username">@ElenaHairBot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/ElenaHairBot', '_blank')">Тестировать</button>
+                </div>
+
+                <div class="bot-item">
+                    <div class="bot-emoji">🏕️</div>
+                    <h3 class="bot-title">Шишки</h3>
+                    <p class="bot-desc">База отдыха</p>
+                    <span class="bot-username">@shishki_manager_bot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/shishki_manager_bot', '_blank')">Тестировать</button>
+                </div>
+
+                <div class="bot-item">
+                    <div class="bot-emoji">🪑</div>
+                    <h3 class="bot-title">Brent Mebel</h3>
+                    <p class="bot-desc">Мебель</p>
+                    <span class="bot-username">@BrentMebelBot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/BrentMebelBot', '_blank')">Тестировать</button>
+                </div>
+
+                <div class="bot-item">
+                    <div class="bot-emoji">🛂</div>
+                    <h3 class="bot-title">Vander Groop</h3>
+                    <p class="bot-desc">Туристические паспорта</p>
+                    <span class="bot-username">@VanderGroop_bot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/VanderGroop_bot', '_blank')">Тестировать</button>
+                </div>
+
+                <div class="bot-item">
+                    <div class="bot-emoji">🏠</div>
+                    <h3 class="bot-title">Okna Lovchego</h3>
+                    <p class="bot-desc">Пластиковые окна</p>
+                    <span class="bot-username">@OknaLovchego_bot</span>
+                    <button class="try-btn" onclick="window.open('https://t.me/OknaLovchego_bot', '_blank')">Тестировать</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Final CTA Section - Зумерский стиль -->
     <section class="final-cta">
